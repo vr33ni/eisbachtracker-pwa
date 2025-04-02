@@ -1,45 +1,124 @@
-# eisbach-pwa
+# 🌊 EisbachTracker PWA
 
-This template should help get you started developing with Vue 3 in Vite.
+A Progressive Web App (PWA) that shows live water level and flow data for the Eisbach River in Munich using the [Pegelalarm API](https://api.pegelalarm.at).
 
-## Recommended IDE Setup
+Built with [Vue 3](https://vuejs.org/), [Vite](https://vitejs.dev/), and the [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) to support installation on mobile devices.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Type Support for `.vue` Imports in TS
+## 📦 Features
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Real-time water level + flow fetching
+- Threshold alert for river conditions
+- Offline-capable PWA
+- Installable on Chrome, Android, Safari (manual)
+- Built with Vue + Vite + Tailwind (CDN)
+- GitHub Pages deployment via GitHub Actions
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🚀 Getting Started
 
-## Project Setup
+### 🧩 Requirements
 
-```sh
-npm install
-```
+- Node.js 18+
+- `pnpm` (or `npm` / `yarn` if preferred)
 
-### Compile and Hot-Reload for Development
+### 🔧 Local Dev Setup
 
-```sh
-npm run dev
-```
+```bash
+pnpm install    # or npm install
+pnpm dev        # or npm run dev
+# 🌊 EisbachTracker PWA
 
-### Type-Check, Compile and Minify for Production
+A Progressive Web App (PWA) that shows live water level and flow for the Eisbach River in Munich — using Vue 3, Vite, Tailwind, and GitHub Pages.
 
-```sh
-npm run build
-```
+---
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## 📦 Features
 
-```sh
-npm run test:unit
-```
+- ✅ Live data from Pegelalarm API
+- ✅ Water level alert if below threshold
+- ✅ Works offline (PWA)
+- ✅ Installable on mobile & desktop
+- ✅ GitHub Actions CI/CD
 
-### Lint with [ESLint](https://eslint.org/)
+---
 
-```sh
-npm run lint
-```
+## 🚀 Getting Started
+
+### Clone & install
+
+    git clone https://github.com/your-username/eisbachtracker-pwa.git
+    cd eisbachtracker-pwa
+    pnpm install   # or npm install
+
+### Add your `.env` file
+
+Create a `.env` file at the root with:
+
+    VITE_API_URL=https://api.pegelalarm.at/api/station/1.0/list?commonid=16515005-de&responseDetailLevel=high
+
+### Run the app
+
+    pnpm dev
+
+Visit: http://localhost:5173
+
+---
+
+## 🛠 Build & Preview (test local install button - only works on Chrome)
+
+    pnpm build      # Builds to ./dist
+    pnpm preview    # Locally preview the built PWA
+
+---
+
+## ⚙️ Deploying to GitHub Pages
+
+Uses GitHub Actions + [`peaceiris/actions-gh-pages`](https://github.com/peaceiris/actions-gh-pages)
+
+### Setup
+
+Go to **Settings > Secrets > Actions** and add:
+
+- `VITE_API_URL`: same API URL as above
+
+Update `vite.config.ts`:
+
+    base: '/eisbachtracker-pwa/'
+
+Push to `main` or `master`.
+
+The GitHub Actions workflow will:
+
+- Inject your `.env` secret
+- Build the site
+- Deploy `dist/` to `gh-pages` branch
+
+Then set GitHub Pages source to `gh-pages` branch.
+
+---
+
+## 📱 PWA
+
+- Works offline
+- Chrome/Edge: install button appears
+- iOS Safari: “Add to Home Screen” manually
+
+---
+
+## 🔄 Reset install (for testing)
+
+- Chrome: go to `chrome://apps`, remove app
+- iOS: long press → remove from home screen
+- Clear cache in browser dev tools
+
+---
+
+## 🧑‍💻 Author
+
+Built by [@vr33ni](https://github.com/vr33ni)  
+Data from [pegelalarm.at](https://api.pegelalarm.at)
+
+---

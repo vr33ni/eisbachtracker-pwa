@@ -1,36 +1,5 @@
 # 🌊 EisbachTracker PWA
 
-A Progressive Web App (PWA) that shows live water level and flow data for the Eisbach River in Munich using the [Pegelalarm API](https://api.pegelalarm.at).
-
-Built with [Vue 3](https://vuejs.org/), [Vite](https://vitejs.dev/), and the [vite-plugin-pwa](https://vite-pwa-org.netlify.app/) to support installation on mobile devices.
-
----
-
-## 📦 Features
-
-- Real-time water level + flow fetching
-- Threshold alert for river conditions
-- Offline-capable PWA
-- Installable on Chrome, Android, Safari (manual)
-- Built with Vue + Vite + Tailwind (CDN)
-- GitHub Pages deployment via GitHub Actions
-
----
-
-## 🚀 Getting Started
-
-### 🧩 Requirements
-
-- Node.js 18+
-- `pnpm` (or `npm` / `yarn` if preferred)
-
-### 🔧 Local Dev Setup
-
-```bash
-pnpm install    # or npm install
-pnpm dev        # or npm run dev
-# 🌊 EisbachTracker PWA
-
 A Progressive Web App (PWA) that shows live water level and flow for the Eisbach River in Munich — using Vue 3, Vite, Tailwind, and GitHub Pages.
 
 ---
@@ -67,7 +36,7 @@ Visit: http://localhost:5173
 
 ---
 
-## 🛠 Build & Preview (test local install button - only works on Chrome)
+## 🛠 Build & Preview (to locally test the install button - only works on Chrome)
 
     pnpm build      # Builds to ./dist
     pnpm preview    # Locally preview the built PWA

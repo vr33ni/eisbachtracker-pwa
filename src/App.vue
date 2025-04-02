@@ -30,7 +30,7 @@ const waterFlowText = ref('Loading...');
 const showWaterLevelAlert = ref(false);
 
 // API URL for Eisbach River
-const apiUrl = 'https://api.pegelalarm.at/api/station/1.0/list?commonid=16515005-de&responseDetailLevel=high';
+const apiUrl = import.meta.env.VITE_API_URL;
 
 // Fetch water level and display it
 const fetchWaterData = () => {

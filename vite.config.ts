@@ -16,9 +16,10 @@ export default defineConfig({
         name: 'EisbachTracker PWA',
         short_name: 'EisbachTracker',
         description: 'Your app description',
+        start_url: '/eisbachtracker-pwa/',  
         icons: [
           {
-            src: '/pwa-icon.JPG', // Corrected path to icon
+            src: '/eisbachtracker-pwa/pwa-icon.svg', 
             sizes: '512x512',
             type: 'image/svg+xml'
           }

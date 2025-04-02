@@ -2,7 +2,7 @@
   <div id="app" class="min-h-screen flex flex-col items-center justify-center px-6 py-12 bg-gradient-to-b from-blue-100 to-white dark:from-gray-900 dark:to-gray-800 text-center transition-all">
 
     <h1 class="text-4xl sm:text-5xl font-bold text-blue-600 dark:text-blue-300 mb-8">
-      Eisbach Water Level
+      Eisbach Tracker
     </h1>
 
     <div class="text-2xl text-gray-800 dark:text-gray-200 mb-4">

@@ -1,13 +1,13 @@
 {
     "name": "EisbachTracker PWA",
     "short_name": "EisbachTracker",
-    "start_url": "/",
+    "start_url": "/eisbachtracker-pwa/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#4CAF50",
     "icons": [
       {
-        "src": "/pwa-icon.svg",   
+        "src": "/eisbachtracker-pwa/pwa-icon.jpg",
         "sizes": "192x192",
         "type": "image/svg+xml"
       },

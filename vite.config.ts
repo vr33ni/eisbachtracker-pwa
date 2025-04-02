@@ -6,8 +6,8 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/eisbachtracker-pwa/',  
-  plugins: [
+  base: process.env.NODE_ENV === 'production' ? '/eisbachtracker-pwa/' : '/',
+    plugins: [
     vue(),
     vueJsx(),
     vueDevTools(),
@@ -19,10 +19,10 @@ export default defineConfig({
         start_url: '/eisbachtracker-pwa/',  
         icons: [
           {
-            src: '/eisbachtracker-pwa/pwa-icon.svg', 
-            sizes: '512x512',
+            src: '/eisbachtracker-pwa/pwa-icon.svg',
+            sizes: '192x192',
             type: 'image/svg+xml'
-          }
+          },
         ]
       },
       registerType: 'autoUpdate',

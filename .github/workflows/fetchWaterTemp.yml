@@ -43,15 +43,17 @@ jobs:
             --data-urlencode "t={\"16515005\":[\"fluesse.wassertemperatur\"]}" \
             -c cookies.txt -D headers.txt
 
-          TOKEN=$(grep -o 'token=[^&]*' headers.txt | head -n1 | cut -d= -f2)
+          TOKEN=$(grep -o 'token=[a-zA-Z0-9]\+' token_response.html | head -n1 | cut -d= -f2)
 
           if [ -z "$TOKEN" ]; then
-            echo "No token found"
+            echo "❌ No token found in response!"
+            cat token_response.html
             exit 1
           fi
 
-          curl -L -b cookies.txt -o water_temp.zip "https://www.gkd.bayern.de/de/downloadcenter/download?token=$TOKEN&dl=1"
-          unzip -o water_temp.zip -d extracted
+          curl -L "https://www.gkd.bayern.de/de/downloadcenter/download?token=$TOKEN&dl=1" -o temp.zip
+          unzip -o temp.zip -d public/data/
+          
           find extracted -type f -name '*.csv' -exec mv {} ./public/data/16515005_tmw_daily.csv \;
 
       - name: Deploy to GitHub Pages
